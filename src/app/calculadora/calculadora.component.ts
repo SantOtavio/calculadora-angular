@@ -1,6 +1,5 @@
 import { style } from "@angular/animations";
 import { Component, OnInit } from "@angular/core";
-import { unwatchFile } from "fs";
 
 @Component({
   selector: "app-calculadora",
@@ -27,6 +26,14 @@ export class CalculadoraComponent implements OnInit {
   }
 
   calcular() {
+    if (
+      this.valorVisor.substring(1) == "*" ||
+      this.valorVisor.substring(1) == "/" ||
+      this.valorVisor.substring(1) == "+" ||
+      this.valorVisor.substring(1) == "-"
+    ) {
+      this.valorVisor == "";
+    }
     this.valorVisor = eval(this.valorVisor);
   }
 
