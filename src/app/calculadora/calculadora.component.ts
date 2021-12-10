@@ -23,21 +23,24 @@ export class CalculadoraComponent implements OnInit {
       this.valorVisor = "";
     }
     this.valorVisor += valor.numero;
+    this.valorVisor = this.valorVisor.toString();
   }
 
   calcular() {
     if (
-      this.valorVisor.substring(1) == "*" ||
-      this.valorVisor.substring(1) == "/" ||
-      this.valorVisor.substring(1) == "+" ||
-      this.valorVisor.substring(1) == "-"
+      this.valorVisor.substring(this.valorVisor.length - 1) == "*" ||
+      this.valorVisor.substring(this.valorVisor.length - 1) == "/" ||
+      this.valorVisor.substring(this.valorVisor.length - 1) == "+" ||
+      this.valorVisor.substring(this.valorVisor.length - 1) == "-"
     ) {
-      this.valorVisor == "";
+    } else {
+      this.valorVisor = eval(this.valorVisor);
     }
-    this.valorVisor = eval(this.valorVisor);
+
+    this.valorVisor.toString();
   }
 
-  limpar() {
+  limpar(){
     this.valorVisor = "";
   }
 }
