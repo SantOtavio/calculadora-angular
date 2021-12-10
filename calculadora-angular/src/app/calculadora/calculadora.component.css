@@ -1,0 +1,17 @@
+.calc-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 700px;
+    border: solid 4px black;
+    margin-top: 30px;
+    background-color: rgb(49, 144, 223);
+    row-gap: 30px;
+}
+
+.buttons-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+    margin-top: 30px;
+}
