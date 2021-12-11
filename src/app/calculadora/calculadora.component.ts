@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./calculadora.component.css"],
 })
 export class CalculadoraComponent implements OnInit {
+  apagar: string;
   constructor() {}
 
   ngOnInit() {}
@@ -22,7 +23,7 @@ export class CalculadoraComponent implements OnInit {
     ) {
       this.valorVisor = "";
     }  
-    
+
       this.valorVisor += valor.numero;
     this.valorVisor = this.valorVisor.toString();
   }
@@ -44,5 +45,9 @@ export class CalculadoraComponent implements OnInit {
 
   limpar() {
     this.valorVisor = "";
+  }
+
+  delbutton(){
+   this.valorVisor = this.valorVisor.substring(0 ,this.valorVisor.length - 1);
   }
 }

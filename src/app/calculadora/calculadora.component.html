@@ -2,6 +2,11 @@
     <app-linha>
         <app-visor [clickedValue]="valorVisor"></app-visor>
     </app-linha>
+    <div class="delbutton">
+        <app-linha>
+            <app-botao class="delbutton" [valor]="'⇦'" (click)="delbutton()"></app-botao>
+        </app-linha>
+    </div>
     <div class="buttons-container">
         <app-linha>
             <app-botao class="numbutton" [valor]="'7'" (onClick)="clickPerson($event)"></app-botao>
