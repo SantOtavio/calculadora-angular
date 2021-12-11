@@ -33,7 +33,8 @@ export class CalculadoraComponent implements OnInit {
       this.valorVisor.substring(this.valorVisor.length - 1) == "*" ||
       this.valorVisor.substring(this.valorVisor.length - 1) == "/" ||
       this.valorVisor.substring(this.valorVisor.length - 1) == "+" ||
-      this.valorVisor.substring(this.valorVisor.length - 1) == "-"
+      this.valorVisor.substring(this.valorVisor.length - 1) == "-" ||
+      this.valorVisor.substring(this.valorVisor.length - 1) == "%"
     ) {
       this.valorVisor = "";
     } else {
